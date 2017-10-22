@@ -5,8 +5,6 @@ import {
   View
 } from 'react-native';
 
-import { Button } from 'react-native-elements';
-
 export default class BarraNavegacao extends Component {
   render() {
     return (

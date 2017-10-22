@@ -6,16 +6,12 @@ import {
   View
 } from 'react-native';
 
-import { Button } from 'react-native-elements';
-
-import BarraNavegacao from './src/components/BarraNavegacao';
+import CenaPrincipal from './src/components/CenaPrincipal';
 
 export default class App extends Component<{}> {
   render() {
     return (
-      <View>
-        <BarraNavegacao/>       
-      </View>
+      <CenaPrincipal/>
     );
   }
 }

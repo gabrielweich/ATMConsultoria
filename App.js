@@ -6,12 +6,12 @@ import {
   View
 } from 'react-native';
 
-import CenaPrincipal from './src/components/CenaPrincipal';
+import Rotas from './src/Rotas';
 
 export default class App extends Component<{}> {
   render() {
     return (
-      <CenaPrincipal/>
+      <Rotas/>
     );
   }
 }

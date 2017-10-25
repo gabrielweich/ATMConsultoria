@@ -3,10 +3,11 @@ import {
   StyleSheet,
   Text,
   View,
-  Image
+  Image,
+  TouchableHighlight
 } from 'react-native';
 
-import BarraNavegacao from './BarraNavegacao';
+import { Actions } from 'react-native-router-flux';
 
 const logo = require('../imgs/logo.png');
 const menuCliente = require('../imgs/menu_cliente.png');
@@ -17,23 +18,24 @@ const menuServico = require('../imgs/menu_servico.png');
 export default class CenaPrincipal extends Component {
   render() {
     return (
-      <View>
-
-        <BarraNavegacao/>
+      <View  style={styles.container}>
 
         <View style={styles.logo}>
-          <Image source={logo}/>
+          <Image source={logo} />
         </View>
-        
+
         <View style={styles.menu}>
           <View style={styles.menuGrupo}>
-            <Image style={styles.imgMenu} source={menuCliente}/>
-            <Image style={styles.imgMenu} source={menuContato}/>
+            <TouchableHighlight
+            onPress={() => {Actions.cenaclientes();}}>
+              <Image style={styles.imgMenu} source={menuCliente} />
+            </TouchableHighlight>
+            <Image style={styles.imgMenu} source={menuContato} />
           </View>
 
           <View style={styles.menuGrupo}>
-            <Image style={styles.imgMenu} source={menuEmpresa}/>
-            <Image style={styles.imgMenu} source={menuServico}/>
+            <Image style={styles.imgMenu} source={menuEmpresa} />
+            <Image style={styles.imgMenu} source={menuServico} />
           </View>
         </View>
 
@@ -43,6 +45,11 @@ export default class CenaPrincipal extends Component {
 }
 
 const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#fff'
+  },
+
   logo: {
     marginTop: 30,
     alignItems: 'center'

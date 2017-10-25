@@ -27,11 +27,15 @@ export default class CenaPrincipal extends Component {
         <View style={styles.menu}>
           <View style={styles.menuGrupo}>
             <TouchableHighlight
+              underlayColor={'#fff'}
+              activeOpacity={0.5}
               onPress={() => { Actions.cenaclientes(); }}>
               <Image style={styles.imgMenu} source={menuCliente} />
             </TouchableHighlight>
 
             <TouchableHighlight
+              underlayColor={'#fff'}
+              activeOpacity={0.5}
               onPress={() => { Actions.cenacontatos(); }}>
               <Image style={styles.imgMenu} source={menuContato} />
             </TouchableHighlight>
@@ -39,10 +43,18 @@ export default class CenaPrincipal extends Component {
 
           <View style={styles.menuGrupo}>
             <TouchableHighlight
+              underlayColor={'#fff'}
+              activeOpacity={0.5}
               onPress={() => { Actions.cenaempresa(); }}>
               <Image style={styles.imgMenu} source={menuEmpresa} />
             </TouchableHighlight>
-            <Image style={styles.imgMenu} source={menuServico} />
+
+            <TouchableHighlight
+              underlayColor={'#fff'}
+              activeOpacity={0.5}
+              onPress={() => { Actions.cenaservicos(); }}>
+              <Image style={styles.imgMenu} source={menuServico} />
+            </TouchableHighlight>
           </View>
         </View>
 

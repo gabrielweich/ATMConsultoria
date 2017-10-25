@@ -4,6 +4,7 @@ import CenaPrincipal from './components/CenaPrincipal';
 import CenaClientes from './components/CenaClientes';
 import CenaContatos from './components/CenaContatos';
 import CenaEmpresa from './components/CenaEmpresa';
+import CenaServicos from './components/CenaServicos';
 
 import {Router, Scene, Stack} from 'react-native-router-flux';
 
@@ -14,6 +15,7 @@ const Rotas = () => (
       <Scene key='cenaclientes' component={CenaClientes} title="Nossos Clientes" />
       <Scene key='cenacontatos' component={CenaContatos} title="Contatos" />
       <Scene key='cenaempresa' component={CenaEmpresa} title="A Empresa" />
+      <Scene key='cenaservicos' component={CenaServicos} title="A Empresa" />
     </Stack>
   </Router>
 );

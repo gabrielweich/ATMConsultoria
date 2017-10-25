@@ -43,7 +43,8 @@ const styles = StyleSheet.create({
 
   cabecalho: {
     flexDirection: 'row',
-    marginTop: 20
+    marginTop: 20,
+    marginHorizontal: 20
   },
 
   txtTitulo: {

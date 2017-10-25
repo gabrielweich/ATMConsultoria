@@ -18,7 +18,7 @@ const menuServico = require('../imgs/menu_servico.png');
 export default class CenaPrincipal extends Component {
   render() {
     return (
-      <View  style={styles.container}>
+      <View style={styles.container}>
 
         <View style={styles.logo}>
           <Image source={logo} />
@@ -27,10 +27,14 @@ export default class CenaPrincipal extends Component {
         <View style={styles.menu}>
           <View style={styles.menuGrupo}>
             <TouchableHighlight
-            onPress={() => {Actions.cenaclientes();}}>
+              onPress={() => { Actions.cenaclientes(); }}>
               <Image style={styles.imgMenu} source={menuCliente} />
             </TouchableHighlight>
-            <Image style={styles.imgMenu} source={menuContato} />
+
+            <TouchableHighlight
+              onPress={() => { Actions.cenacontatos(); }}>
+              <Image style={styles.imgMenu} source={menuContato} />
+            </TouchableHighlight>
           </View>
 
           <View style={styles.menuGrupo}>
